@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Gama.GrupoAvengers.Blog.BlogLead>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Página Inicial", "Create")
+
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <p>@item.Id</p>
+            <p>@item.Name</p>
+            <p>@item.Lastname</p>
+            <p>@item.Email</p>
+            <p>@item.ClientIP</p>
+            <p>@item.RegistrationDate</p>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

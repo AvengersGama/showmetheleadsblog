@@ -1,0 +1,139 @@
+﻿@model Gama.GrupoAvengers.Blog.BlogLead
+
+@{
+    ViewBag.Title = "Receber E-Book";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99625813-1', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+
+    <div>
+
+        <div id="video" class="video">
+            <div class="scanlines"></div>
+            <div class="video-container" style="clip: rect(0px 1519px 813px 0px);">
+                <video id="player" autoplay="" loop="" style="display: inline-block; height: 854.438px; width: 1519px; clip: rect(0px 1519px 813px 0px);">
+                    @*<source id="playerMp4" type="video/mp4" src="~/Assets/microsoft-connected-world-720p1.mp4">
+                    <source id="playerWebm" type="video/webm" src="~/Assets/microsoft-connected-world-720p.webm">*@
+
+                    <source id="playerMp4" type="video/mp4" src="http://spaceneedlewebsite.blob.core.windows.net/media/videos/spaceneedle-connected-world-720p1.mp4">
+                    <source id="playerWebm" type="video/webm" src="http://spaceneedlewebsite.blob.core.windows.net/media/videos/spaceneedle-connected-world-720p.webm">
+
+                </video>
+            </div>
+        </div>
+
+        <div class="float-header">
+
+            <div class="header-title">
+                <span class="header-title-sub">
+                    Quer sabe tudo sobre pagamento digital?
+                    <br />
+                    Baixe agora nosso e-book grátis!
+                </span>
+            </div>
+
+            <div class="form">
+                <form class="login-form">
+                    <div class="form-group">
+                        <div>
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @placeholder = "Nome"  } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <di>
+                            @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @placeholder = "Sobrenome" } })
+                            @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+                        </di>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new {  @placeholder = "Seu melhor Email" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <button>RECEBER E-BOOK</button>
+
+                    <p class="message">Praticamos politica de anti-spam</p>
+                </form>
+            </div>
+
+        </div>
+
+
+        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <label class="control-label col-md-2">Nome:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Sobrenome:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Sobrenome:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ClientIP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ClientIP, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ClientIP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RegistrationDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.RegistrationDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.RegistrationDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>*@
+
+
+
+
+    </div>
+}
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
