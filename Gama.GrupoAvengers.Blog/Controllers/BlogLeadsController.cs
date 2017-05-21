@@ -21,18 +21,9 @@ namespace Gama.GrupoAvengers.Blog.Controllers
         }
 
         // GET: BlogLeads/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Post1()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            BlogLead blogLead = db.BlogLeads.Find(id);
-            if (blogLead == null)
-            {
-                return HttpNotFound();
-            }
-            return View(blogLead);
+            return View();
         }
 
         // GET: BlogLeads/Create

@@ -170,8 +170,6 @@ body
     font-weight: bold;
 }
 
-
-
 .float-header
 {
     position: absolute;
@@ -179,4 +177,25 @@ body
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+#registerForm {
+    border: 2px solid gainsboro
+}
+
+#imageBio {
+    background-color: gray;
+    
+    width: 70%;
+    height: 300px;
+    /*float: right;*/
+}
+
+.form-fields-margin {
+    margin-left: 4%;
+}
+
+#footer{
+    margin: 0 auto;
+    text-align: center;
 }
