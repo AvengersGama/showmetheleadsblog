@@ -20,8 +20,20 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             return View(db.BlogLeads.ToList());
         }
 
-        // GET: BlogLeads/Details/5
+        // GET: BlogLeads/Post1
         public ActionResult Post1()
+        {
+            return View();
+        }
+
+        // GET: BlogLeads/Post2
+        public ActionResult Post2()
+        {
+            return View();
+        }
+
+        // GET: BlogLeads/Post3
+        public ActionResult Post3()
         {
             return View();
         }
