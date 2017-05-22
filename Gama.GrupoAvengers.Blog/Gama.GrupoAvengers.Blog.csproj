@@ -213,10 +213,12 @@
     <Compile Include="Controllers\BioController.cs" />
     <Compile Include="Controllers\BlogArticlesController.cs" />
     <Compile Include="Controllers\BlogLeadsController.cs" />
+    <Compile Include="Controllers\ExportLeadsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Leads.cs" />
     <Compile Include="MyLeads.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -297,9 +299,13 @@
     <Content Include="Views\BlogArticles\Post2.cshtml" />
     <Content Include="Views\BlogArticles\Post3.cshtml" />
     <Content Include="Views\Bio\Biography.cshtml" />
+    <Content Include="Views\ExportLeads\Create.cshtml" />
+    <Content Include="Views\ExportLeads\Delete.cshtml" />
+    <Content Include="Views\ExportLeads\Details.cshtml" />
+    <Content Include="Views\ExportLeads\Edit.cshtml" />
+    <Content Include="Views\ExportLeads\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Views\Ebook\" />
   </ItemGroup>
   <ItemGroup>
@@ -330,7 +336,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>20209</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

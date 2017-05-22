@@ -7,37 +7,51 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Gama.GrupoAvengers.Blog;
+using System.Text;
+using System.IO;
+using Gama.GrupoAvengers.Blog.Models;
+using System.Globalization;
 
 namespace Gama.GrupoAvengers.Blog.Controllers
 {
-    public class BlogLeadsController : Controller
+    public class ExportLeadsController : Controller
     {
         private avengersblogEntities db = new avengersblogEntities();
 
-        // GET: BlogLeads
+        // GET: ExportLeads
         public ActionResult Index()
         {
             return View(db.BlogLeads.ToList());
         }
 
-        // GET: BlogLeads/Create
+        // GET: ExportLeads/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            BlogLead blogLead = db.BlogLeads.Find(id);
+            if (blogLead == null)
+            {
+                return HttpNotFound();
+            }
+            return View(blogLead);
+        }
+
+        // GET: ExportLeads/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: BlogLeads/Create
+        // POST: ExportLeads/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Lastname,Email")] BlogLead blogLead)
+        public ActionResult Create([Bind(Include = "Id,Name,Lastname,Email,ClientIP,RegistrationDate")] BlogLead blogLead)
         {
-
-            blogLead.ClientIP = Request.UserHostAddress;
-            blogLead.RegistrationDate = DateTime.UtcNow.AddHours(-3).ToString("yyyy-MM-dd HH:mm:ss");
-
-
             if (ModelState.IsValid)
             {
                 db.BlogLeads.Add(blogLead);
@@ -48,7 +62,7 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             return View(blogLead);
         }
 
-        // GET: BlogLeads/Edit/5
+        // GET: ExportLeads/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -63,7 +77,7 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             return View(blogLead);
         }
 
-        // POST: BlogLeads/Edit/5
+        // POST: ExportLeads/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -79,7 +93,7 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             return View(blogLead);
         }
 
-        // GET: BlogLeads/Delete/5
+        // GET: ExportLeads/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -94,7 +108,7 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             return View(blogLead);
         }
 
-        // POST: BlogLeads/Delete/5
+        // POST: ExportLeads/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -113,5 +127,44 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public ActionResult All()
+        {
+            try
+            {
+                var sb = new StringBuilder();
+                sb.AppendLine("email,nome,ip,tipo,data_hora");
+
+                var leads = db.BlogLeads
+                    .Select(x => new { Line = x.Email + "," +
+                    x.Name + "," +
+                    x.ClientIP + "," +
+                    "TIPO" + "," +
+                    x.RegistrationDate
+                    })
+                    .ToList();
+
+
+                foreach (var lead in leads)
+                {
+                    sb.AppendLine(lead.Line);
+                }
+
+                var byteArray = Encoding.UTF8.GetBytes(sb.ToString());
+                var stream = new MemoryStream(byteArray);
+
+
+                return File(stream, "text/plain", "Export - " + DateTime.UtcNow.AddHours(-3) + ".csv");
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return null;
+        }
+
+
     }
 }
