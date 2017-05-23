@@ -238,10 +238,29 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\04112337289322-t1200x480.jpg" />
+    <Content Include="Assets\5-2-480x453.jpg" />
+    <Content Include="Assets\Associate_Entrepreneurship-550x400.jpg" />
+    <Content Include="Assets\black-friday_aj6s.jpg" />
+    <Content Include="Assets\Como-Vender-Mais-na-Sua-Loja-Online.jpg" />
+    <Content Include="Assets\diainterenacionalconsumidor.gif" />
+    <Content Include="Assets\evolucao_mobile_ecommerce.jpg" />
+    <Content Include="Assets\ferramentas-marketing-ecommerce..jpg" />
+    <Content Include="Assets\img-1.png" />
+    <Content Include="Assets\img-2.png" />
+    <Content Include="Assets\img-3.png" />
+    <Content Include="Assets\img-4.png" />
+    <Content Include="Assets\img-5.png" />
+    <Content Include="Assets\img-6.png" />
+    <Content Include="Assets\img-7.png" />
+    <Content Include="Assets\img-8.png" />
+    <Content Include="Assets\img-9.png" />
+    <Content Include="Assets\Loja-fisica-x-e-commerce-qual-vende-mais-televendas-cobranca.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\main-header-container-background.jpg" />
+    <Content Include="Content\styles.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="MyLeads.Context.tt">
@@ -266,7 +285,13 @@
     <Content Include="MyLeads.edmx.diagram">
       <DependentUpon>MyLeads.edmx</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\Azure Deploy.pubxml" />
+    <Content Include="fonts\open-sans-bold.woff" />
+    <Content Include="fonts\open-sans-bold.woff2" />
+    <Content Include="fonts\open-sans-italic.woff" />
+    <Content Include="fonts\open-sans-italic.woff2" />
+    <Content Include="fonts\open-sans-regular.woff" />
+    <Content Include="fonts\open-sans-regular.woff2" />
+    <None Include="Properties\PublishProfiles\AWS Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -278,6 +303,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scripts.min.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -289,7 +315,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\BlogArticles\Post1.cshtml" />
@@ -299,20 +324,18 @@
     <Content Include="Views\BlogArticles\Post2.cshtml" />
     <Content Include="Views\BlogArticles\Post3.cshtml" />
     <Content Include="Views\Bio\Biography.cshtml" />
-    <Content Include="Views\ExportLeads\Create.cshtml" />
-    <Content Include="Views\ExportLeads\Delete.cshtml" />
-    <Content Include="Views\ExportLeads\Details.cshtml" />
-    <Content Include="Views\ExportLeads\Edit.cshtml" />
     <Content Include="Views\ExportLeads\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\BlogArticles\Post4.cshtml" />
+    <Content Include="Views\BlogArticles\Post5.cshtml" />
+    <Content Include="Views\BlogArticles\Post6.cshtml" />
+    <Content Include="Views\BlogArticles\Post7.cshtml" />
+    <Content Include="Views\Shared\whoweare.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Ebook\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

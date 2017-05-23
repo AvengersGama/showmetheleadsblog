@@ -199,3 +199,19 @@ body
     margin: 0 auto;
     text-align: center;
 }
+
+p {
+    text-align:justify;
+    text-wrap:normal;
+    text-indent:30px;
+}
+
+img {
+    max-height:100%;
+    max-width:100%;
+}
+
+h2 {
+    font-weight:bold;
+}
+
