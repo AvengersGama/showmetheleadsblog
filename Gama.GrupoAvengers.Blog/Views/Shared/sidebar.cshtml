@@ -1,6 +1,59 @@
 ﻿@{
 //Layout = null;
 }
+    <h2>Mais Recentes</h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="@Url.Action("Post1", "BlogArticles")">Artigo 1</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Post2", "BlogArticles")">Artigo 2</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Post3", "BlogArticles")">Artigo 3</a>
+            </li>
+            <li>
+                <a href="#">Artigo 4</a>
+            </li>
+        </ul>
+    </nav>
+    <h2>Mais lidos</h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="@Url.Action("Post1", "BlogArticles")">Artigo 1</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Post2", "BlogArticles")">Artigo 2</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Post3", "BlogArticles")">Artigo 3</a>
+            </li>
+            <li>
+                <a href="#">Artigo 4</a>
+            </li>
+        </ul>
+    </nav>
+    <h2>Categorias</h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Categoria 1</a>
+            </li>
+            <li>
+                <a href="#">Categoria 2</a>
+            </li>
+            <li>
+                <a href="#">Categoria 3</a>
+            </li>
+            <li>
+                <a href="#">Categoria 4</a>
+            </li>
+        </ul>
+    </nav>
+
+
 <div class="row-fluid">
     <div id="registerForm">
         <form>
@@ -20,37 +73,3 @@
     </div>
 </div>
 <br />
-<div class="row-fluid">
-    <div id="imageBio">
-        IMAGE
-        @*<img id="imageBio" src="~/Content/bio.png" />*@
-    </div>
-    <h3>Perfil do Blog ou Bio</h3>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit lectus hendrerit,
-        sagittis risus non, suscipit nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit lectus hendrerit,
-        sagittis risus non, suscipit nulla.
-    </p>
-</div>
-<br />
-<div class="row-fluid">
-    <h3>Posts Recentes</h3>
-</div>
-<div class="row-fluid">
-    <a href="@Url.Action("Post3", "BlogArticles")"><h3>A Evolução das Ferramentas de E-commerce</h3></a>
-    <p>
-        DD/MM/YYYY
-    </p>
-</div>
-<div class="row-fluid">
-    <a href="@Url.Action("Post2", "BlogArticles")"><h3>Por que muitas lojas físicas ainda não vendem online?</h3></a>
-    <p>
-        DD/MM/YYYY
-    </p>
-</div>
-<div class="row-fluid">
-    <a href="@Url.Action("Post1", "BlogArticles")"><h3>Varejista: Você já pensou nos benefícios de vender em ambiente online?</h3></a>
-    <p>
-        DD/MM/YYYY
-    </p>
-</div>
