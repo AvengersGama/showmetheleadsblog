@@ -140,7 +140,7 @@ namespace Gama.GrupoAvengers.Blog.Controllers
                     .Select(x => new { Line = x.Email + "," +
                     x.Name + "," +
                     x.ClientIP + "," +
-                    "TIPO" + "," +
+                    x.LeadType + "," +
                     x.RegistrationDate
                     })
                     .ToList();
