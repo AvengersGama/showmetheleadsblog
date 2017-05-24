@@ -179,44 +179,44 @@ body
     transform: translate(-50%, -50%);
 }
 
-#registerForm {
-    border: 2px solid gainsboro
+#registerForm
+{
+    border: 2px solid gainsboro;
 }
 
-#imageBio {
+#imageBio
+{
     background-color: gray;
-    
     width: 70%;
     height: 300px;
     /*float: right;*/
 }
 
-.form-fields-margin {
+.form-fields-margin
+{
     margin-left: 4%;
 }
 
-#footer{
+#footer
+{
     margin: 0 auto;
     text-align: center;
 }
 
-p {
-    text-align:justify;
-    text-wrap:normal;
-    text-indent:30px;
+p
+{
+    text-align: justify;
+    text-wrap: normal;
+    text-indent: 30px;
 }
 
-img {
-    max-height:100%;
-    max-width:100%;
+img
+{
+    max-height: 100%;
+    max-width: 100%;
 }
 
-h2 {
-    font-weight:bold;
-}
-.modal-dialog {
-    position: absolute;
-    left:50%;
-    max-width:100%;
-
+h2
+{
+    font-weight: bold;
 }

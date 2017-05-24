@@ -4,21 +4,27 @@
 }
 
 
-
-
 <script type="text/javascript">
-    $("#myModal").modal('show');
+    window.onload = function () {
+
+        var open = window.localStorage.getItem('firstTime');
+        if (open != 'true')
+        {
+            document.getElementById('id01').style.display = 'block';
+        }
+
+        var email = window.localStorage.getItem('emailSend');
+        if (email == 'true') {
+            alert("E-Book enviado para o email informado. Verifique sua caixa de entrada");
+            window.localStorage.setItem('emailSend', 'false');
+        }
+}
 </script>
-
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-
 
     <h2>Artigos</h2>
     <div class="article-list">
         <article>
             <h3>Como vender os produtos da sua loja pela internet?</h3>
-            <p>Publicado 22 de abril as 23:55:03</p>
             <p>
                 Vender seus produtos na web é uma maneira muito eficiente para quem deseja ampliar o seu negócio,
                 principalmente para quem já possui uma loja física.
@@ -28,11 +34,11 @@
             Hoje em dia ficou muito fácil montar uma loja virtual para vender produtos. Mas qual seria
             a melhor e mais segura maneira para fazer isso?
         </p>
-        <a href="@Url.Action("como-vender-os-produtos-da-sua-loja-pela-internet", "BlogArticles")">Ler artigo completo</a>
+        <a href="@Url.Action("como-vender-os-produtos-da-sua-loja-pela-internet", "artigos")">Ler artigo completo</a>
     </article>
     <article>
         <h3>Por que muitas lojas físicas ainda não vendem online?</h3>
-        <img src="images/e-commerce-ou-loja-fisica.jpg" alt="E-commerce ou loja física" title="E-commerce ou loja física">
+        <img src="~/Assets/e-commerce-ou-loja-fisica.jpg" alt="E-commerce ou loja física" title="E-commerce ou loja física">
         <p>
             Apesar do crescimento consistente do e-commerce no Brasil, com o país ocupando o quinto lugar
             do mundo em compras pela internet, ainda é grande o número de lojas que não possui uma plataforma
@@ -41,11 +47,11 @@
         <p>
             Mas por que isto ocorre?
         </p>
-        <a href="@Url.Action("por-que-muitas-lojas-fisicas-ainda-nao-vendem-online", "BlogArticles")">Ler artigo completo</a>
+        <a href="@Url.Action("por-que-muitas-lojas-fisicas-ainda-nao-vendem-online", "artigos")">Ler artigo completo</a>
     </article>
     <article>
         <h3>A Evolução das Ferramentas de E-commerce</h3>
-        <img src="images/ferramentas-de-e-commerce.jpg" alt="Ferramentas de e-commerce" title="Ferramentas de e-commerce">
+        <img src="~/Assets/ferramentas-de-e-commerce.jpg" alt="Ferramentas de e-commerce" title="Ferramentas de e-commerce">
         <p>
             Com o avanço acelerado das transações online nos últimos anos, tem se verificado um aumento
             substancial de ferramentas de e-commerce. Surgem cada vez mais empresas com soluções sofisticadas,
@@ -55,11 +61,11 @@
             seja pelas alternativas e benefícios adicionais que são oferecidos ao cliente para concretizar a
             transação.
         </p>
-        <a href="@Url.Action("a-evolucao-das-ferramentas-de-e-commerce", "BlogArticles")">Ler artigo completo</a>
+        <a href="@Url.Action("a-evolucao-das-ferramentas-de-e-commerce", "artigos")">Ler artigo completo</a>
     </article>
     <article>
         <h3>Tendências do E-commerce</h3>
-        <img src="images/tendencias-do-e-commerce.jpg" alt="Tendências do e-commerce" title="Tendências do e-commerce">
+        <img src="~/Assets/tendencias-do-e-commerce.jpg" alt="Tendências do e-commerce" title="Tendências do e-commerce">
         <p>
             Com o mercado online no sentido contrário da crise, apresentando um crescimento nominal de
 
@@ -67,11 +73,11 @@
 
             de grande importância começar a ter olhos para o que está por vir em 2017.
         </p>
-        <a href="@Url.Action("tendencias-do-e-commerce", "BlogArticles")">Ler artigo completo</a>
+        <a href="@Url.Action("tendencias-do-e-commerce", "artigos")">Ler artigo completo</a>
     </article>
     <article>
         <h3>O Sucesso dos e-commerces em datas especiais</h3>
-        <img src="images/black-friday.jpg" alt="Black friday" title="Black friday">
+        <img src="~/Assets/black-friday.jpg" alt="Black friday" title="Black friday">
         <p>
             O setor de de e-commerce tem suas características como por exemplo não possuem
 
@@ -88,11 +94,11 @@
                 e Dia dos Namorados que também são datas comemoradas em varejo convencional.
             </p>
 
-        <a href="@Url.Action("o-sucesso-dos-e-commerces-em-datas-especiais", "BlogArticles")">Ler artigo completo</a>
+        <a href="@Url.Action("o-sucesso-dos-e-commerces-em-datas-especiais", "artigos")">Ler artigo completo</a>
     </article>
     <article>
         <h3>Varejista: Você já pensou nos benefícios de vender em ambiente online?</h3>
-        <img src="images/beneficios-vender-ambiente-online.jpg" alt="Benefícios de vender em ambiente online" title="Benefícios de vender em ambiente online">
+        <img src="~/Assets/beneficios-vender-ambiente-online.jpg" alt="Benefícios de vender em ambiente online" title="Benefícios de vender em ambiente online">
         <p>
             No último relatório Web Shoppers, foi divulgado o crescimento do mercado de vendas online.
             Os números apontam para um crescimento nominal anual de 7,4% em 2016.
@@ -103,7 +109,7 @@
             reforça a tendência de migração do ambiente offline para o online, bem como a redução
             substancial de custos. Isto se deve à diferença de preços praticados entre os dois ambientes.
         </p>
-        <a href="@Url.Action("varejista-voce-ja-pensou-nos-beneficios-de-vender-em-ambiente-online", "BlogArticles")">Ler artigo completo</a>
+        <a href="@Url.Action("varejista-voce-ja-pensou-nos-beneficios-de-vender-em-ambiente-online", "artigos")">Ler artigo completo</a>
     </article>
 
     </div>

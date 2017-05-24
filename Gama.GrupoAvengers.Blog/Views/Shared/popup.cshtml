@@ -1,19 +1,116 @@
-﻿<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+﻿
+@model Gama.GrupoAvengers.Blog.BlogLead
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+@{
+    Layout = null;
+}
+
+
+<script>
+    function selectOption() {
+        var leadtype = document.getElementById('Lead');
+        leadtype.style.display = 'none';
+
+        var leadform = document.getElementById('LeadForm');
+        leadform.style.display = 'inline';
+    }
+
+    function closePopup() {
+        document.getElementById('id01').style.display = 'none';
+        window.localStorage.setItem('firstTime', 'true');
+    }
+
+    function getEbook() {
+        //alert("E-Book enviado para o email informado. Verifique sua caixa de entrada");
+        window.localStorage.setItem('emailSend', 'true');
+    }
+
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content"  style="padding:20px">
+            <header class="w3-container">
+                <button type="button" onclick="closePopup()"
+                        class="pull-right btn-warning">
+                    Fechar X
+                </button>
+            </header>
+            <div>
+                <form>
+                    <div class="w3-container" id="Lead">
+                        <br />
+                        <div>
+                            <h2>Qual seu interesse em e-Commerce?</h2>
+                            <br>
+
+                            @Html.RadioButton("LeadType", "b2b", new { @class = "btn-primary", @onclick= "selectOption()" }) Já possuo um e-Commerce e procuro mais informações
+                            <br>
+                            <br>
+                            
+                            @Html.RadioButton("LeadType", "b2c", new { @class = "btn-primary", @onclick = "selectOption()" }) Quero criar uma loja virtual
+                            
+                        </div>
+                        <br />
+                    </div>
+
+                    <div id="LeadForm" style="display:none">
+
+                        <div class="form">
+                            <div class="w3-container">
+                                <div class="form-group">
+                                    <div>
+                                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @placeholder = "Nome", @required = "true" } })
+                                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <di>
+                                        @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @placeholder = "Sobrenome", @required = "true" } })
+                                        @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+                                    </di>
+                                </div>
+
+                                <div class="form-group">
+                                    <di>
+                                        @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @placeholder = "Empresa (Opcional)" } })
+                                        @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger" })
+                                    </di>
+                                </div>
+
+                                <div class="form-group">
+                                    <div>
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Seu melhor Email", @required = "true" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <button onclick="getEbook()">RECEBER E-BOOK GRÁTIS</button>
+
+
+                                <p class="message">Praticamos politica de anti-spam</p>
+
+
+
+                                <button type="button" onclick="closePopup()"
+                                        class="btn-primary">
+                                    Fechar e Visitar o Blog
+                                </button>
+
+                            </div>
+                        </div>
+                </div>
+                </form>
             </div>
-            <div class="modal-body">
-                <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+
+
         </div>
-
     </div>
-</div>
+
+
+}

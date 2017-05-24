@@ -6,16 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PagueWay: o seu blog sobre soluções de pagamento</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/styles.min.css" rel="stylesheet">
     <link href="~/Content/Site.css" rel="stylesheet">
 
+
+    <script type="text/javascript">
+        function downloadEbook() {
+            document.getElementById('id01').style.display = 'block'
+
+            var leadtype = document.getElementById('Lead');
+            leadtype.style.display = 'inline';
+
+            var leadform = document.getElementById('LeadForm');
+            leadform.style.display = 'none';
+        }
+    </script>
 </head>
+
 <body>
 
     @Html.Partial("popup")
+
     <nav id="top-nav-container">
+    
     </nav>
 
     <header id="main-header-container">
@@ -25,7 +40,12 @@
                     <div id="main-header-content">
                         <span id="main-header-pagueway">PagueWay</span>
                         <h1 id="main-header-pagueway-subtitle">O seu blog sobre soluções em pagamento</h1>
-                        <a id="main-header-pagueway-ebook-button" href="@Url.Action("Create", "BlogLeads")"  target="_blank">Baixar e-book gratuito</a>
+
+                        @*<a id="main-header-pagueway-ebook-button" href="@Url.Action("Create", "BlogLeads")" target="_blank">Baixar e-book gratuito</a>*@
+                        <a id="main-header-pagueway-ebook-button" onclick="downloadEbook()">Baixar e-book gratuito</a>
+
+
+
                     </div>
                 </div>
             </div>
@@ -37,6 +57,7 @@
             <div class="row">
                 <div id="content" class="col-sm-9">
                     @RenderBody()
+
                 </div>
 
                 <aside id="side-bar" class="col-sm-3">
@@ -55,6 +76,5 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/scripts.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

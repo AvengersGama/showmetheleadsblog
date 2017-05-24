@@ -238,14 +238,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\04112337289322-t1200x480.jpg" />
     <Content Include="Assets\5-2-480x453.jpg" />
-    <Content Include="Assets\Associate_Entrepreneurship-550x400.jpg" />
-    <Content Include="Assets\black-friday_aj6s.jpg" />
-    <Content Include="Assets\Como-Vender-Mais-na-Sua-Loja-Online.jpg" />
+    <Content Include="Assets\beneficios-vender-ambiente-online.jpg" />
+    <Content Include="Assets\black-friday.jpg" />
     <Content Include="Assets\diainterenacionalconsumidor.gif" />
+    <Content Include="Assets\e-commerce-ou-loja-fisica.jpg" />
     <Content Include="Assets\evolucao_mobile_ecommerce.jpg" />
-    <Content Include="Assets\ferramentas-marketing-ecommerce..jpg" />
+    <Content Include="Assets\ferramentas-de-e-commerce.jpg" />
     <Content Include="Assets\img-1.png" />
     <Content Include="Assets\img-2.png" />
     <Content Include="Assets\img-3.png" />
@@ -255,14 +254,15 @@
     <Content Include="Assets\img-7.png" />
     <Content Include="Assets\img-8.png" />
     <Content Include="Assets\img-9.png" />
-    <Content Include="Assets\Loja-fisica-x-e-commerce-qual-vende-mais-televendas-cobranca.jpg" />
+    <Content Include="Assets\tendencias-do-e-commerce.jpg" />
+    <Content Include="Assets\vender-produtos-pela-internet.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\main-header-container-background.jpg" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\styles.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="MyLeads.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MyLeads.edmx</DependentUpon>
@@ -317,22 +317,21 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
-    <Content Include="Views\BlogArticles\Post1.cshtml" />
     <Content Include="Views\BlogLeads\Index.cshtml" />
     <Content Include="Views\Shared\sidebar.cshtml" />
     <Content Include="Views\BlogLeads\Create.cshtml" />
-    <Content Include="Views\BlogArticles\Post2.cshtml" />
-    <Content Include="Views\BlogArticles\Post3.cshtml" />
     <Content Include="Views\Bio\Biography.cshtml" />
     <Content Include="Views\ExportLeads\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
-    <Content Include="Views\BlogArticles\Post4.cshtml" />
-    <Content Include="Views\BlogArticles\Post5.cshtml" />
-    <Content Include="Views\BlogArticles\Post6.cshtml" />
-    <Content Include="Views\BlogArticles\Post7.cshtml" />
     <Content Include="Views\Shared\whoweare.cshtml" />
     <Content Include="Views\Shared\popup.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\BlogArticles\a_evolucao_das_ferramentas_de_e_commerce.cshtml" />
+    <Content Include="Views\BlogArticles\como_vender_os_produtos_da_sua_loja_pela_internet.cshtml" />
+    <Content Include="Views\BlogArticles\o_sucesso_dos_e_commerces_em_datas_especiais.cshtml" />
+    <Content Include="Views\BlogArticles\por_que_muitas_lojas_fisicas_ainda_nao_vendem_online.cshtml" />
+    <Content Include="Views\BlogArticles\tendencias_do_e_commerce.cshtml" />
+    <Content Include="Views\BlogArticles\varejista_voce_ja_pensou_nos_beneficios_de_vender_em_ambiente_online.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Ebook\" />

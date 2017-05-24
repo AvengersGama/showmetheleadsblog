@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="153165ac0965419296760103f6875f3a" Name="Diagram1">
-        <EntityTypeShape EntityType="AvengersblogModel.BlogLead" Width="1.5" PointX="5.625" PointY="1" />
+        <EntityTypeShape EntityType="AvengersblogModel.BlogLead" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

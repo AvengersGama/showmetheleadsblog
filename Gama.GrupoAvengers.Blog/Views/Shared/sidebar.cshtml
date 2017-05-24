@@ -1,26 +1,29 @@
 ﻿@{
 //Layout = null;
 }
+
+<a href="@Url.Action("Index","Home")">Inicio</a>
+
 <h2>Mais Recentes</h2>
 <nav>
     <ul>
         <li>
-            <a href="@Url.Action("Post1", "BlogArticles")">Artigo 1</a>
+            <a href="@Url.Action("a-evolucao-das-ferramentas-de-e-commerce", "artigos")">A Evolução das Ferramentas de E-commerce</a>
         </li>
         <li>
-            <a href="@Url.Action("Post2", "BlogArticles")">Artigo 2</a>
+            <a href="@Url.Action("como-vender-os-produtos-da-sua-loja-pela-internet", "artigos")">Como vender os produtos da sua loja pela internet?</a>
         </li>
         <li>
-            <a href="@Url.Action("Post3", "BlogArticles")">Artigo 3</a>
+            <a href="@Url.Action("o-sucesso-dos-e-commerces-em-datas-especiais", "artigos")">O Sucesso dos e-commerces em datas especiais</a>
         </li>
         <li>
-            <a href="@Url.Action("Post4", "BlogArticles")">Artigo 4</a>
+            <a href="@Url.Action("por-que-muitas-lojas-fisicas-ainda-nao-vendem-online", "artigos")">Por que muitas lojas físicas ainda não vendem online?</a>
         </li>
         <li>
-            <a href="@Url.Action("Post5", "BlogArticles")">Artigo 5</a>
+            <a href="@Url.Action("tendencias-do-e-commerce", "artigos")">Tendências do E-commerce</a>
         </li>
         <li>
-            <a href="@Url.Action("Post6", "BlogArticles")">Artigo 6</a>
+            <a href="@Url.Action("varejista-voce-ja-pensou-nos-beneficios-de-vender-em-ambiente-online", "artigos")">Varejista: Você já pensou nos benefícios de vender em ambiente online?</a>
         </li>
     </ul>
 </nav>
@@ -28,19 +31,14 @@
 <nav>
     <ul>
         <li>
-            <a href="@Url.Action("Post6", "BlogArticles")">Artigo 6</a>
+            <a href="@Url.Action("como-vender-os-produtos-da-sua-loja-pela-internet", "artigos")">Como vender os produtos da sua loja pela internet?</a>
         </li>
         <li>
-            <a href="@Url.Action("Post4", "BlogArticles")">Artigo 4</a>
+            <a href="@Url.Action("varejista-voce-ja-pensou-nos-beneficios-de-vender-em-ambiente-online", "artigos")">Varejista: Você já pensou nos benefícios de vender em ambiente online?</a>
         </li>
         <li>
-            <a href="@Url.Action("Post1", "BlogArticles")">Artigo 1</a>
+            <a href="@Url.Action("tendencias-do-e-commerce", "artigos")">Tendências do E-commerce</a>
         </li>
-        <li>
-            <a href="@Url.Action("Post2", "BlogArticles")">Artigo 2</a>
-        </li>
-
-
     </ul>
 </nav>
 <h2>Categorias</h2>
@@ -64,7 +62,7 @@
 
 <div class="row-fluid">
     <div id="registerForm">
-        <form>
+        @*<form>
             <fieldset class="form-fields-margin form-group">
                 <h3>Assine Aqui</h3>
                 <p>
@@ -77,7 +75,7 @@
                 </div>
                 <button type="submit" class="btn btn-default">Receber Novidades</button>
             </fieldset>
-        </form>
+        </form>*@
     </div>
 </div>
 <br />
