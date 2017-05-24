@@ -17,23 +17,7 @@
 
 </script>
 
-<script type="text/javascript">
-    window.onload = function () {
 
-        var open = window.localStorage.getItem('firstTime');
-        if (open != 'true')
-        {
-            document.getElementById('id01').style.display = 'block';
-        }
-
-        var mail = window.localStorage.getItem('MailSended');
-        if (mail == 'true') {
-            alert("Verifique sua caixa de email. Enviamos um e-Book sensacional!");
-            localStorage.setItem("MailSended", "false");
-        }
-
-}
-</script>
 
     <h2>Artigos</h2>
     <div class="article-list">

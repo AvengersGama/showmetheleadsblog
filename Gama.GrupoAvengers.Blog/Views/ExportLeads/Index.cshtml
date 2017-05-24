@@ -4,46 +4,43 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Relatório de Leads</h2>
 
-<p>
+<h3>
 
     @Html.ActionLink("Baixar Relatório", "All")
-
-
-
-</p>
+</h3>
 
 <h3>Total: @Model.Count()</h3>
 
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+           Nome
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Lastname)
+            Sobrenome
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            Email
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ClientIP)
+            IP
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RegistrationDate)
+            Data de Cadastro
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LeadType)
+            Tipo
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LeadIs)
+            Razão da Visita
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Company)
+            Empresa
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Occupation)
+            Cargo
         </th>
         <th></th>
     </tr>
