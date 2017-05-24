@@ -15,8 +15,6 @@
           <Property Name="Email" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="ClientIP" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="RegistrationDate" Type="nvarchar" MaxLength="150" Nullable="false" />
-          <Property Name="Company" Type="nvarchar" MaxLength="150" />
-          <Property Name="QuestionA" Type="nvarchar" MaxLength="150" />
         </EntityType>
         <EntityContainer Name="AvengersblogModelStoreContainer">
           <EntitySet Name="BlogLeads" EntityType="Self.BlogLeads" Schema="dbo" store:Type="Tables" />
@@ -38,8 +36,6 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="ClientIP" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="RegistrationDate" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="Company" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="QuestionA" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -50,8 +46,6 @@
           <EntitySetMapping Name="BlogLeads">
             <EntityTypeMapping TypeName="AvengersblogModel.BlogLead">
               <MappingFragment StoreEntitySet="BlogLeads">
-                <ScalarProperty Name="QuestionA" ColumnName="QuestionA" />
-                <ScalarProperty Name="Company" ColumnName="Company" />
                 <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
                 <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
