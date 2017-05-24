@@ -85,7 +85,7 @@
 
                                 <div class="form-group">
                                     <div>
-                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Seu melhor Email", @required = "true" } })
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Seu melhor Email", @required = "true", @type = "email" } })
                                         @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
