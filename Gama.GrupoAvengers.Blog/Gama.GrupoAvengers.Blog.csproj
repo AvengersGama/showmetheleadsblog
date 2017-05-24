@@ -256,10 +256,15 @@
     <Content Include="Assets\img-7.png" />
     <Content Include="Assets\img-8.png" />
     <Content Include="Assets\img-9.png" />
+    <Content Include="Assets\ipad.png" />
+    <Content Include="Assets\landing-page-logo.jpg" />
+    <Content Include="Assets\landingpage_bg.png" />
+    <Content Include="Assets\pagueWay.png" />
     <Content Include="Assets\tendencias-do-e-commerce.jpg" />
     <Content Include="Assets\vender-produtos-pela-internet.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\landingPage.css" />
     <Content Include="Content\main-header-container-background.jpg" />
     <Content Include="Content\styles.min.css" />
     <Content Include="favicon.ico" />
@@ -292,6 +297,7 @@
     <Content Include="fonts\open-sans-italic.woff2" />
     <Content Include="fonts\open-sans-regular.woff" />
     <Content Include="fonts\open-sans-regular.woff2" />
+    <Content Include="Assets\.DS_Store" />
     <Content Include="Assets\Como_Montar_Seu_Ecommerce-Ebook.pdf" />
     <None Include="Properties\PublishProfiles\AWS Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -308,6 +314,7 @@
     <Content Include="Scripts\scripts.min.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\BlogLeads\landing_page.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -321,7 +328,7 @@
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\BlogLeads\Index.cshtml" />
     <Content Include="Views\Shared\sidebar.cshtml" />
-    <Content Include="Views\BlogLeads\Create.cshtml" />
+    <None Include="Views\BlogLeads\Create.cshtml" />
     <Content Include="Views\Bio\Biography.cshtml" />
     <Content Include="Views\ExportLeads\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
