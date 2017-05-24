@@ -34,15 +34,21 @@ namespace Gama.GrupoAvengers.Blog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Lastname,Email")] BlogLead blogLead)
+        public ActionResult Create([Bind(Include = "Name,Email,Company,Lastname")] BlogLead blogLead)
         {
 
             blogLead.ClientIP = Request.UserHostAddress;
             blogLead.RegistrationDate = DateTime.UtcNow.AddHours(-3).ToString("yyyy-MM-dd HH:mm:ss");
 
 
+
             if (ModelState.IsValid)
             {
+                if(blogLead.Lastname == null) // TODO: TROCAR FULLB
+                {
+                    blogLead.Lastname = "Não Informado";
+                }
+
                 db.BlogLeads.Add(blogLead);
                 db.SaveChanges();
                 return RedirectToAction("Index");

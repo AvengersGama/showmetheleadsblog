@@ -1,0 +1,37 @@
+.bg.header {
+	background-color: #000000;
+	min-height: 30px;
+}
+.bg.conteudo {
+	background-image: url("../Assets/landingpage_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right top;
+	min-height: 731px;
+}
+.bg.logo {
+
+	/* background-color: #cccccc ; */
+	margin-top: 90px;
+}
+.logoPagueWay {
+	background-image: url("../Assets/pagueWay.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+	min-height: 116px;
+}
+.bg.tablet {
+	background-image: url("../Assets/ipad.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+	min-height: 557px;
+}
+.bg.formulario {
+	color: #ffffff;
+	margin-top: 90px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	padding: 10px 10px 10px 10px;
+}
