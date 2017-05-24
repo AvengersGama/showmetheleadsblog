@@ -9,6 +9,16 @@
 	background-position: right top;
 	min-height: 1200px;
 }
+
+.bg.conteudo-min {
+	background-image: url("../../Assets/landingpage_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right top;
+	min-height: 750px;
+    position: relative;
+}
+
 .bg.logo {
 
 	/* background-color: #cccccc ; */
@@ -21,6 +31,7 @@
 	background-position: center top;
 	min-height: 116px;
 }
+
 .bg.tablet {
 	background-image: url("../../Assets/ipad.png");
 	background-repeat: no-repeat;
@@ -34,4 +45,18 @@
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 5px;
 	padding: 10px 10px 10px 10px;
+}
+
+#thankyou {
+    position: relative;
+    background-color:cornflowerblue;
+}
+
+#buble{
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }

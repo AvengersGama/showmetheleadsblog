@@ -1,24 +1,37 @@
-﻿
+﻿@model Gama.GrupoAvengers.Blog.BlogLead
+
 @{
     Layout = null;
+    ViewBag.Title = "Landing Page";
+
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Thankyou</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Landing Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    @*<link rel="stylesheet" type="text/css" href="css/landingPage.css">*@
+    <link href="~/Content/landingPage.css" rel="stylesheet" />
 
     <!-- Facebook Pixel Code -->
     <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '946798795390961'); // Insert your pixel ID here.
-fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '946798795390961'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
@@ -27,9 +40,60 @@ fbq('track', 'PageView');
     <!-- DO NOT MODIFY -->
     <!-- End Facebook Pixel Code -->
 
+    <script>
+        function selectOption(type) {
+            var leadtype = document.getElementById('Lead').style.display = 'none';
+
+            var leadform = document.getElementById('LeadForm').style.display = 'inline';
+
+
+            var leadtype = document.getElementById('type1').style.display = 'none';
+            var leadtype = document.getElementById('type2').style.display = 'none';
+            var leadtype = document.getElementById('type3').style.display = 'none';
+            var leadtype = document.getElementById('type4').style.display = 'none';
+
+
+            if (type == "1") {
+                var leadtype = document.getElementById('type1').style.display = 'inline';
+
+            }
+            else if (type == "2") {
+                var leadtype = document.getElementById('type2').style.display = 'inline';
+
+            }
+            else if (type == "3") {
+                var leadtype = document.getElementById('type3').style.display = 'inline';
+
+            }
+            else if (type == "4") {
+                var leadtype = document.getElementById('type4').style.display = 'inline';
+
+            }
+        }
+
+        function SendLead() {
+            localStorage.setItem("MailSended", "true");
+            window.localStorage.setItem('firstTime', 'true');
+        }
+
+
+
+
+    </script>
 </head>
 <body>
-    <div> 
+
+    <div class="container-fluid bg conteudo-min">
+        <div class="row" id="thankyou">
+            <div id="buble">
+                Obrigado
+
+            </div>
+        </div>
     </div>
+
+
+
+
 </body>
 </html>

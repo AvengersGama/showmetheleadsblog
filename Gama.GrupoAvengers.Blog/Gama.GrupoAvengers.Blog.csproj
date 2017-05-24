@@ -261,6 +261,8 @@
     <Content Include="Assets\landingpage_bg.png" />
     <Content Include="Assets\pagueWay.png" />
     <Content Include="Assets\tendencias-do-e-commerce.jpg" />
+    <Content Include="Assets\main-header-container-background.jpg" />
+    <Content Include="Assets\topo_bg.jpg" />
     <Content Include="Assets\vender-produtos-pela-internet.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

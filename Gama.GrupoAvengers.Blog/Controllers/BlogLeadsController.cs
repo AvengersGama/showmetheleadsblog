@@ -25,6 +25,7 @@ namespace Gama.GrupoAvengers.Blog.Controllers
         public ActionResult Thankyou()
         {
             return RedirectToAction("Index", "Home");
+            //return View();
 
         }
 
