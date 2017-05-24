@@ -239,10 +239,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\5-2-480x453.jpg" />
+    <Content Include="Assets\bannerebook.png" />
     <Content Include="Assets\beneficios-vender-ambiente-online.jpg" />
     <Content Include="Assets\black-friday.jpg" />
     <Content Include="Assets\diainterenacionalconsumidor.gif" />
     <Content Include="Assets\e-commerce-ou-loja-fisica.jpg" />
+    <Content Include="Assets\ebook.PNG" />
     <Content Include="Assets\evolucao_mobile_ecommerce.jpg" />
     <Content Include="Assets\ferramentas-de-e-commerce.jpg" />
     <Content Include="Assets\img-1.png" />
@@ -259,7 +261,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\main-header-container-background.jpg" />
-    <Content Include="Content\Site.css" />
     <Content Include="Content\styles.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -291,6 +292,7 @@
     <Content Include="fonts\open-sans-italic.woff2" />
     <Content Include="fonts\open-sans-regular.woff" />
     <Content Include="fonts\open-sans-regular.woff2" />
+    <Content Include="Assets\Como_Montar_Seu_Ecommerce-Ebook.pdf" />
     <None Include="Properties\PublishProfiles\AWS Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

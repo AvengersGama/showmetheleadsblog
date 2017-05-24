@@ -21,36 +21,26 @@ namespace Gama.GrupoAvengers.Blog.Controllers
         public ActionResult Index([Bind(Include = "Name,Lastname,Email,LeadType,Company")] BlogLead blogLead)
         {
 
-            //try
-            //{
-            //    SmtpClient client = new SmtpClient();
-            //client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            //client.EnableSsl = true;
-            //client.Host = "smtp.gmail.com";
-            //client.Port = 587;
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("ebook@pagueway.com.br");
+                mail.To.Add(blogLead.Email);
+                mail.Subject = "Download E-Book";
+                mail.Body = "<h3>Olá, Tudo bem?</h3><br><p>Seu E-Book está disponivel no link abaixo.</p>" +
+                    "<br> <a href='http://pagueway.com.br/Assets/Como_Montar_Seu_Ecommerce-Ebook.pdf'> <img src='http://pagueway.com.br/Assets/ebook.PNG'> </a>" +
+                    "<br> Equipe Pagueway";
+                mail.IsBodyHtml = true;
+                //mail.Attachments.Add(new Attachment("~/Assets/Como_Montar_Seu_Ecommerce-Ebook.pdf"));
 
-            //// setup Smtp authentication
-            //System.Net.NetworkCredential credentials =
-            //    new System.Net.NetworkCredential("avengers10gama@gmail.com", "gama123456");
-            //client.UseDefaultCredentials = false;
-            //client.Credentials = credentials;
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("avengers10gama@gmail.com", "gama123456");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
+            }
 
-            //MailMessage msg = new MailMessage();
-            //msg.From = new MailAddress("avengers10gama@gmail.com");
-            //msg.To.Add(blogLead.Email);
-
-            //msg.Subject = "E-Book - Blog Pagueway - Ecommerce";
-            //msg.IsBodyHtml = true;
-            //msg.Body = "\n\n  Olá,\n\nSegue abaixo o link para download. \n\n https://goo.gl/sxWXWf ";
-
-            //    client.Send(msg);
-               
-            //}
-            //catch (Exception ex)
-            //{
-            //    Response.Write("Could not send the e-mail - error: " + ex.Message);
-
-            //}
+          
 
 
             blogLead.ClientIP = Request.UserHostAddress;
