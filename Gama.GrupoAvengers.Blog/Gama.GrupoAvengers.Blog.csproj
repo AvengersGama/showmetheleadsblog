@@ -331,6 +331,8 @@
     <Content Include="Views\BlogArticles\Post6.cshtml" />
     <Content Include="Views\BlogArticles\Post7.cshtml" />
     <Content Include="Views\Shared\whoweare.cshtml" />
+    <Content Include="Views\Shared\popup.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Ebook\" />

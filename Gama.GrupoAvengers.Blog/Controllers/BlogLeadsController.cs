@@ -10,6 +10,7 @@ using Gama.GrupoAvengers.Blog;
 
 namespace Gama.GrupoAvengers.Blog.Controllers
 {
+    //[RoutePrefix("blog")]
     public class BlogLeadsController : Controller
     {
         private avengersblogEntities db = new avengersblogEntities();
@@ -20,7 +21,9 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             return View(db.BlogLeads.ToList());
         }
 
+
         // GET: BlogLeads/Create
+        //[Route("ganhar-ebook")]
         public ActionResult Create()
         {
             return View();

@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PagueWay: o seu blog sobre soluções de pagamento</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/styles.min.css" rel="stylesheet">
     <link href="~/Content/Site.css" rel="stylesheet">
+
 </head>
 <body>
 
+    @Html.Partial("popup")
     <nav id="top-nav-container">
     </nav>
 
@@ -29,6 +32,7 @@
         </div>
     </header>
     <section id="main-section-container">
+                    
         <div id="main-section" class="section-content">
             <div class="row">
                 <div id="content" class="col-sm-9">
@@ -48,8 +52,9 @@
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/scripts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

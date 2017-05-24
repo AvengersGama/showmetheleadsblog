@@ -214,4 +214,9 @@ img {
 h2 {
     font-weight:bold;
 }
+.modal-dialog {
+    position: absolute;
+    left:50%;
+    max-width:100%;
 
+}
