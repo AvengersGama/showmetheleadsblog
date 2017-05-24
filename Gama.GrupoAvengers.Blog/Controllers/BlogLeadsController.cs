@@ -44,17 +44,17 @@ namespace Gama.GrupoAvengers.Blog.Controllers
 
             if (ModelState.IsValid)
             {
-                if(blogLead.Lastname == null) // TODO: TROCAR FULLB
+                if(blogLead.Lastname == null) // TODO: TROCAR FULLNAME POR CARGO
                 {
                     blogLead.Lastname = "Não Informado";
                 }
 
                 db.BlogLeads.Add(blogLead);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","home");
             }
 
-            return View(blogLead);
+            return View();
         }
 
         // GET: BlogLeads/Edit/5
