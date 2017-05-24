@@ -22,5 +22,7 @@ namespace Gama.GrupoAvengers.Blog
         public string RegistrationDate { get; set; }
         public string Company { get; set; }
         public string LeadType { get; set; }
+        public string LeadIs { get; set; }
+        public string Occupation { get; set; }
     }
 }

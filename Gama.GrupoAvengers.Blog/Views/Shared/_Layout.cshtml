@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PagueWay: o seu blog sobre soluções de pagamento</title>
 
-    <link href="Content/bootstrap.min.css" rel="stylesheet">
-    <link href="Content/styles.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/styles.min.css" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/landingPage.css">
+
+
 </head>
 <body>
-
-    <nav id="top-nav-container">
-    </nav>
 
        <section id="main-section-container">
         <div id="main-section" class="section-content">
             <div class="row">
-                <div id="content" class="col-sm-9">
+                <div id="content" class="col-sm-12">
                     @RenderBody()
                 </div>
-
-                <aside id="side-bar" class="col-sm-3">
-                    @Html.Partial("sidebar")
-                </aside>
-
             </div>
         </div>
     </section>
@@ -34,8 +33,10 @@
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/scripts.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/scripts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 </html>

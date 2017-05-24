@@ -244,7 +244,7 @@
     <Content Include="Assets\black-friday.jpg" />
     <Content Include="Assets\diainterenacionalconsumidor.gif" />
     <Content Include="Assets\e-commerce-ou-loja-fisica.jpg" />
-    <Content Include="Assets\ebook.PNG" />
+    <Content Include="Assets\ebook_capa.jpg" />
     <Content Include="Assets\evolucao_mobile_ecommerce.jpg" />
     <Content Include="Assets\ferramentas-de-e-commerce.jpg" />
     <Content Include="Assets\img-1.png" />
@@ -314,7 +314,6 @@
     <Content Include="Scripts\scripts.min.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\BlogLeads\landing_page.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -328,9 +327,7 @@
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\BlogLeads\Index.cshtml" />
     <Content Include="Views\Shared\sidebar.cshtml" />
-    <None Include="Views\BlogLeads\Create.cshtml" />
     <Content Include="Views\Bio\Biography.cshtml" />
-    <Content Include="Views\ExportLeads\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="Views\Shared\whoweare.cshtml" />
     <Content Include="Views\Shared\popup.cshtml" />
@@ -341,6 +338,10 @@
     <Content Include="Views\BlogArticles\por_que_muitas_lojas_fisicas_ainda_nao_vendem_online.cshtml" />
     <Content Include="Views\BlogArticles\tendencias_do_e_commerce.cshtml" />
     <Content Include="Views\BlogArticles\varejista_voce_ja_pensou_nos_beneficios_de_vender_em_ambiente_online.cshtml" />
+    <Content Include="Views\Shared\CTA.cshtml" />
+    <Content Include="Views\BlogLeads\Create.cshtml" />
+    <Content Include="Views\BlogLeads\Thankyou.cshtml" />
+    <Content Include="Views\ExportLeads\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Ebook\" />

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Lading Page</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="~/Content/landingPage.css">
+	</head>
+	<body>
+        @using (Html.BeginForm())
+        {
+        @Html.AntiForgeryToken()
+		<div class="container-fluid bg header">
+		</div>
+		<div class="container-fluid bg conteudo">
+			<div class="row">
+				<div class="col-sm-6 bg">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="bg logo">
+								<div class="logoPagueWay">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 bg tablet">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="row">
+						<div class="col-sm-6">
+                            <div class="bg formulario">
+                                <div class="form-group ">
+                                    <h4>Preencha os dados para receber grátis o nosso e-book !</h4>
+                                </div>
+                                <div class="form-group">
+                                    <div>
+                                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @placeholder = "Nome", @required = "true" } })
+                                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <di>
+                                        @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @placeholder = "Sobrenome", @required = "true" } })
+                                        @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+                                    </di>
+                                </div>
+
+                                <div class="form-group">
+                                    <di>
+                                        @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @placeholder = "Empresa (Opcional)" } })
+                                        @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger" })
+                                    </di>
+                                </div>
+
+                                <div class="form-group">
+                                    <di>
+                                        @Html.EditorFor(model => model.Occupation, new { htmlAttributes = new { @placeholder = "Cargo (Opcional)" } })
+                                        @Html.ValidationMessageFor(model => model.Occupation, "", new { @class = "text-danger" })
+                                    </di>
+                                </div>
+
+                                <div class="form-group">
+                                    <div>
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Seu melhor Email", @required = "true", @type = "email" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <h2>Voce é?</h2>
+                                <br>
+
+                                @Html.RadioButton("LeadType", "1", new { @class = "btn-primary", @onclick = "selectOption(1)" }) Empreendedor e já possui uma loja virtual
+                                <br>
+                                @Html.RadioButton("LeadType", "2", new { @class = "btn-primary", @onclick = "selectOption(2)" }) Empreendedor e deseja vender seus produtos/serviços na internet
+                                <br>
+                                @Html.RadioButton("LeadType", "3", new { @class = "btn-primary", @onclick = "selectOption(3)" }) Empreendedor e deseja ampliar sua conversão de vendas e reduzir custos
+                                <br>
+                                @Html.RadioButton("LeadType", "4", new { @class = "btn-primary", @onclick = "selectOption(4)" }) Não empreendedor e deseja apenas ter conhecimento sobre e-commerce
+
+
+                                <button class="btn btn-primary">RECEBER E-BOOK GRÁTIS</button>
+
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        }
+	</body>
+</html>

@@ -7,23 +7,47 @@
 
 
 <script>
-    function selectOption() {
-        var leadtype = document.getElementById('Lead');
-        leadtype.style.display = 'none';
+    function selectOption(type) {
+        var leadtype = document.getElementById('Lead').style.display = 'none';
 
-        var leadform = document.getElementById('LeadForm');
-        leadform.style.display = 'inline';
+        var leadform = document.getElementById('LeadForm').style.display = 'inline';
+
+
+        var leadtype = document.getElementById('type1').style.display = 'none';
+        var leadtype = document.getElementById('type2').style.display = 'none';
+        var leadtype = document.getElementById('type3').style.display = 'none';
+        var leadtype = document.getElementById('type4').style.display = 'none';
+
+
+        if (type == "1") {
+            var leadtype = document.getElementById('type1').style.display = 'inline';
+
+        }
+        else if (type == "2") {
+            var leadtype = document.getElementById('type2').style.display = 'inline';
+
+        }
+        else if (type == "3") {
+            var leadtype = document.getElementById('type3').style.display = 'inline';
+
+        }
+        else if (type == "4") {
+            var leadtype = document.getElementById('type4').style.display = 'inline';
+
+        }
     }
 
     function closePopup() {
         document.getElementById('id01').style.display = 'none';
+        window.localStorage.setItem('firstTime', 'false');
+    }
+
+    function SendLead() {
+        localStorage.setItem("MailSended", "true");
         window.localStorage.setItem('firstTime', 'true');
     }
 
-    function getEbook() {
-        //alert("E-Book enviado para o email informado. Verifique sua caixa de entrada");
-        window.localStorage.setItem('emailSend', 'true');
-    }
+
 
 </script>
 
@@ -33,7 +57,7 @@
 
 
     <div id="id01" class="w3-modal">
-        <div class="w3-modal-content"  style="padding:20px">
+        <div class="w3-modal-content" style="padding:20px">
             <header class="w3-container">
                 <button type="button" onclick="closePopup()"
                         class="pull-right btn-warning">
@@ -45,20 +69,50 @@
                     <div class="w3-container" id="Lead">
                         <br />
                         <div>
-                            <h2>Qual seu interesse em e-Commerce?</h2>
+                            <h2>Você é?</h2>
                             <br>
 
-                            @Html.RadioButton("LeadType", "b2b", new { @class = "btn-primary", @onclick= "selectOption()" }) Já possuo um e-Commerce e procuro mais informações
+                            @Html.RadioButton("LeadType", "1", new { @class = "btn-primary", @onclick = "selectOption(1)" }) Empreendedor e já possui uma loja virtual
                             <br>
+                            @Html.RadioButton("LeadType", "2", new { @class = "btn-primary", @onclick = "selectOption(2)" }) Empreendedor e deseja vender seus produtos/serviços na internet
                             <br>
-                            
-                            @Html.RadioButton("LeadType", "b2c", new { @class = "btn-primary", @onclick = "selectOption()" }) Quero criar uma loja virtual
-                            
+                            @Html.RadioButton("LeadType", "3", new { @class = "btn-primary", @onclick = "selectOption(3)" }) Empreendedor e deseja ampliar sua conversão de vendas e reduzir custos
+                            <br>
+                            @Html.RadioButton("LeadType", "4", new { @class = "btn-primary", @onclick = "selectOption(4)" }) Não empreendedor e deseja apenas ter conhecimento sobre e-commerce
+
+
                         </div>
                         <br />
                     </div>
 
                     <div id="LeadForm" style="display:none">
+
+                        <div id="type1" style="display:none">
+                            <p>
+                                Obrigado pela sua resposta! Se deseja conhecer sobre as melhores
+                                práticas para e-commerce, reduzir seus custos e aumentar suas conversões de vendas, baixe
+                                GRATUITAMENTE nosso e-book
+                            </p>
+                        </div>
+
+                        <div id="type2" style="display:none">
+                            <p>
+                                Obrigado pela sua resposta! Se deseja montar um e-commerce do
+                                início, com as melhores práticas, custos reduzidos e aumento de conversões de vendas, baixe
+                                GRATUITAMENTE nosso e-book
+                            </p>
+                        </div>
+
+                        <div id="type3" style="display:none">
+                            Obrigado pela sua resposta! Se deseja conhecer sobre as melhores
+                            práticas para e-commerce, que podem ser aplicadas em seu negócio para reduzir custos e
+                            aumentar suas conversões de vendas, baixe GRATUITAMENTE nosso e-book
+                        </div>
+
+                        <div id="type4" style="display:none">
+                            Obrigado pela sua resposta! Se deseja conhecer sobre como montar
+                            um e-commerce, com as melhores soluções, baixe GRATUITAMENTE nosso e-book
+                        </div>
 
                         <div class="form">
                             <div class="w3-container">
@@ -84,13 +138,20 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <di>
+                                        @Html.EditorFor(model => model.Occupation, new { htmlAttributes = new { @placeholder = "Cargo (Opcional)" } })
+                                        @Html.ValidationMessageFor(model => model.Occupation, "", new { @class = "text-danger" })
+                                    </di>
+                                </div>
+
+                                <div class="form-group">
                                     <div>
                                         @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Seu melhor Email", @required = "true", @type = "email" } })
                                         @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
-                                <button onclick="getEbook()">RECEBER E-BOOK GRÁTIS</button>
+                                <button  onclick="SendLead()">RECEBER E-BOOK GRÁTIS</button>
 
 
                                 <p class="message">Praticamos politica de anti-spam</p>
@@ -104,7 +165,7 @@
 
                             </div>
                         </div>
-                </div>
+                    </div>
                 </form>
             </div>
 

@@ -7,10 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Gama.GrupoAvengers.Blog;
+using System.Net.Mail;
 
 namespace Gama.GrupoAvengers.Blog.Controllers
 {
-    //[RoutePrefix("blog")]
+    [RoutePrefix("blog")]
     public class BlogLeadsController : Controller
     {
         private avengersblogEntities db = new avengersblogEntities();
@@ -21,37 +22,82 @@ namespace Gama.GrupoAvengers.Blog.Controllers
             return View(db.BlogLeads.ToList());
         }
 
+        public ActionResult Thankyou()
+        {
+            return RedirectToAction("Index", "Home");
+
+        }
+
 
         // GET: BlogLeads/Create
-        //[Route("ganhar-ebook")]
+        [Route("ganhar-ebook")]
         public ActionResult Create()
         {
             return View();
         }
 
+
         // POST: BlogLeads/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Email,Company,Lastname")] BlogLead blogLead)
+        [Route("ganhar-ebook")]
+        public ActionResult Create([Bind(Include = "Name,Lastname,Email,LeadType,Company,Occupation")] BlogLead blogLead)
         {
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("pagueway@gmail.com");
+                mail.To.Add(blogLead.Email);
+                mail.Subject = "Download E-Book";
+                mail.Body = "<h3>Olá, Tudo bem?</h3><br><p>Seu E-Book está disponivel no link abaixo.</p>" +
+                    "<br> <a href='http://pagueway.com.br/Assets/Como_Montar_Seu_Ecommerce-Ebook.pdf'>Download E-Book</a>" +
+                    "<br> Equipe Pagueway";
+                mail.IsBodyHtml = true;
+                //mail.Attachments.Add(new Attachment("~/Assets/Como_Montar_Seu_Ecommerce-Ebook.pdf"));
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("pagueway@gmail.com", "gama123456");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
+            }
+
+
+            switch (blogLead.LeadType)
+            {
+                case "1":
+                    blogLead.LeadIs = "Empreendedor e já possui uma loja virtual";
+                    blogLead.LeadType = "b2b";
+                    break;
+                case "2":
+                    blogLead.LeadIs = "Empreendedor e deseja vender seus produtos/serviços na internet";
+                    blogLead.LeadType = "b2b";
+
+                    break;
+                case "3":
+                    blogLead.LeadIs = "Empreendedor e deseja ampliar sua conversão de vendas e reduzir custos";
+                    blogLead.LeadType = "b2b";
+
+                    break;
+                case "4":
+                    blogLead.LeadIs = "Não empreendedor e deseja apenas ter conhecimento sobre e-commerce";
+                    blogLead.LeadType = "b2c";
+
+                    break;
+                default:
+                    break;
+            }
 
             blogLead.ClientIP = Request.UserHostAddress;
             blogLead.RegistrationDate = DateTime.UtcNow.AddHours(-3).ToString("yyyy-MM-dd HH:mm:ss");
 
 
-
             if (ModelState.IsValid)
             {
-                if(blogLead.Lastname == null) // TODO: TROCAR FULLNAME POR CARGO
-                {
-                    blogLead.Lastname = "Não Informado";
-                }
-
                 db.BlogLeads.Add(blogLead);
                 db.SaveChanges();
-                return RedirectToAction("Index","home");
+                return RedirectToAction("Thankyou", "BlogLeads");
             }
 
             return View();

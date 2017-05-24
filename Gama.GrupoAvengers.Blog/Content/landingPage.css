@@ -3,11 +3,11 @@
 	min-height: 30px;
 }
 .bg.conteudo {
-	background-image: url("../Assets/landingpage_bg.png");
+	background-image: url("../../Assets/landingpage_bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right top;
-	min-height: 731px;
+	min-height: 1200px;
 }
 .bg.logo {
 
@@ -15,14 +15,14 @@
 	margin-top: 90px;
 }
 .logoPagueWay {
-	background-image: url("../Assets/pagueWay.png");
+	background-image: url("../../Assets/pagueWay.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center top;
 	min-height: 116px;
 }
 .bg.tablet {
-	background-image: url("../Assets/ipad.png");
+	background-image: url("../../Assets/ipad.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center top;

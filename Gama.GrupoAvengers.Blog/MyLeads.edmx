@@ -17,6 +17,8 @@
           <Property Name="RegistrationDate" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Company" Type="nvarchar" MaxLength="150" />
           <Property Name="LeadType" Type="nvarchar" MaxLength="150" />
+          <Property Name="LeadIs" Type="nvarchar" MaxLength="150" />
+          <Property Name="Occupation" Type="nvarchar" MaxLength="150" />
         </EntityType>
         <EntityContainer Name="AvengersblogModelStoreContainer">
           <EntitySet Name="BlogLeads" EntityType="Self.BlogLeads" Schema="dbo" store:Type="Tables" />
@@ -40,6 +42,8 @@
           <Property Name="RegistrationDate" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="Company" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="LeadType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="LeadIs" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -50,6 +54,8 @@
           <EntitySetMapping Name="BlogLeads">
             <EntityTypeMapping TypeName="AvengersblogModel.BlogLead">
               <MappingFragment StoreEntitySet="BlogLeads">
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="LeadIs" ColumnName="LeadIs" />
                 <ScalarProperty Name="LeadType" ColumnName="LeadType" />
                 <ScalarProperty Name="Company" ColumnName="Company" />
                 <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
